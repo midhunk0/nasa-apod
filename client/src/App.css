@@ -1,0 +1,256 @@
+/* login register styles */
+
+.form-page{
+    display: flex;
+    overflow: hidden;
+}
+
+.image-div{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-div img{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.logo{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    color: #003B41;
+}
+
+.form-div{
+    padding: 20px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, .3);
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    color: #003B41;
+}
+
+.form-div a{
+    color: #FEFEFC;
+}
+
+.form-div a:hover{
+    color: #003B41;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form input, .form button{
+    padding: 15px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background: #FEFEFC;
+    color: #003B41;
+}
+
+input::placeholder{
+    color: #003B41;
+}
+
+.password{
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.password input{
+    width: 100%;
+}
+
+.password img{
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+
+.form button{
+    background: #003B41;
+    color: #FEFEFC;
+    cursor: pointer;
+}
+
+@media (max-width: 480px) {
+    .form-div {
+        justify-content: center;
+        right: 5%;
+    }
+
+    .form{
+        width: 100%;
+    }
+}
+
+/* navbar styles */
+.navbar{
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+    background: #003B41;
+    color: #FEFEFC;
+}
+
+.navbar h2{
+    cursor: pointer;
+}
+
+.navbar a{
+    color: #FEFEFC;
+    text-decoration: none;
+}
+
+.options{
+    display: flex;
+    /* align-items: center; */
+    gap: 20px;
+}
+
+.options img{
+    width: 24px;
+    height: 24px;
+}
+
+p{
+    cursor: pointer;
+}
+
+.user-options{
+    display: none;
+}
+
+.user-options.show{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background: #003B41;
+    top: 8%;
+    right: 0%;
+    padding: 15px;
+    gap: 10px;
+}
+
+/* nasaphoto */
+.apod-page{
+    display: flex;
+    flex-direction: column;
+}
+
+.apod-details{
+    padding: 20px;
+    background: #FEFEFC;
+    color: #003B41;
+}
+
+.apod-header{
+    display: flex;
+}
+
+.controls{
+    display: flex;
+    justify-content: space-between;
+}
+
+.control-buttons{
+    display: flex;
+    align-items: center;
+}
+
+.control-buttons img{
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.control-input input{
+    outline: none;
+    color: #003B41;
+    border: 1px solid #003B41;
+    padding: 2px;
+    border-radius: 3px;
+}
+
+.apod-details button{
+    display: flex;
+    padding: 10px;
+    background: #003B41;
+    color: #FEFEFC;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 10px 0;
+    gap: 10px;
+    align-items: center;
+}
+
+.apod-details button img{
+    width: 24px;
+    height: 24px;
+}
+
+.apod-contents{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.apod-contents img, .apod-contents iframe{
+    width: 70vw;
+}
+
+@media (max-width: 768px){
+    .apod-contents img, .apod-contents iframe{
+        width: 100%;
+    }
+}
+
+/* favourites */
+.fav-page{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: #003B41;
+}
+
+.fav-items{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background: #003B41;
+    color: #FEFEFC;
+    border: none;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.fav-items h2{
+    cursor: pointer;
+}
+
+.fav-items img{
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
