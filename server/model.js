@@ -6,7 +6,10 @@ const pool=new Pool({
     host: process.env.host,
     database: process.env.database,
     password: process.env.password,
-    port: process.env.port ? parseInt(process.env.port) : undefined
+    port: process.env.port ? parseInt(process.env.port) : undefined,
+    ssl: {
+        rejectUnauthorized: false
+    }
 });
 
 pool.query(
