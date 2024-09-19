@@ -39,7 +39,7 @@ export function Favourites(){
 
     const dateCorrection=(date)=>{
         const currentDate=new Date(date);
-        currentDate.setDate(currentDate.getDate()+1);
+        // currentDate.setDate(currentDate.getDate()+1);
         const correctDate=currentDate.toISOString().slice(0, 10);
         localStorage.setItem("date", correctDate);
     }
