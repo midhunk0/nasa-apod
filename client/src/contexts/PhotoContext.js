@@ -14,11 +14,12 @@ export const PhotoProvider=({ children })=>{
         try{
             const response=await fetch(`https://api.nasa.gov/planetary/apod?api_key=${NASA_API}&date=${date}`);
             const result=await response.json();
+            console.log(result);
             setData(result);
             return result;
         }   
         catch(err){
-            console.log(err);
+            console.log("the error is: ",err);
         } 
     };
 

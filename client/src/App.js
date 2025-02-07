@@ -16,8 +16,8 @@ function App() {
 				<Route path="/login" element={<Login/>}/>
 				<Route path="/register" element={<Register/>}/>
 				<Route element={<Navbar/>}>
-				<Route path="/" element={<NasaPhoto/>}/>
-				<Route path="/favourites" element={<Favourites/>}/>
+                    <Route path="/" element={<NasaPhoto/>}/>
+                    <Route path="/favourites" element={<Favourites/>}/>
 				</Route>
 			</Routes>
 			<ToastContainer 
