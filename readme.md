@@ -1,5 +1,7 @@
 # NASA APOD
 
+![nasa apod](https://github.com/user-attachments/assets/2a9470c1-c9c2-483b-9a52-5731bd46ea15)
+
 
 This is a web app that displays NASA's Astronomy Picture of the Day (APOD), fetched directly from NASA's public API. Users can view daily space-themed photos along with detailed descriptions, and even save the favorite images for later in the Favourites tab.
 
