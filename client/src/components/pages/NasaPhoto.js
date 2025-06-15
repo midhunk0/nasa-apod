@@ -119,7 +119,7 @@ export function NasaPhoto(){
                 </div>
                 <button onClick={toggleFavorites}>
                     {infav ? "Remove from favourites" : "Add to favourites" }                    
-                    {/* <img src={infav ? "unlike.png" : "like.png"} alt={infav ? "unlike" : "like"}/> */}
+                    <img src={infav ? "unlike.png" : "like.png"} alt={infav ? "unlike" : "like"}/>
                 </button>
                 <div className="apod-contents">
                     <p>{data.explanation}</p>

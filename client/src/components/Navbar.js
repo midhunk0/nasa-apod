@@ -1,20 +1,28 @@
-import React, { useState } from "react";
-import { Outlet, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { Outlet, useNavigate, useLocation } from "react-router-dom";
 import { toast } from "react-toastify";
 import { useUser } from "../contexts/UserContext";
 
 function Navbar(){
     const [show, setShow]=useState(false);
     const navigate=useNavigate();
+    const location=useLocation();
     const toggleShow=()=>{
         setShow(!show);
     }
     const { deleteUser }=useUser();
 
+    const tab=location.pathname;
     const username=localStorage.getItem("username")||"";
 
-    const toFav=()=>{
-        navigate("/favourites");
+    const toggleTab=()=>{
+        if(tab==="/"){
+            navigate("/favourites");
+        }
+        else{
+            navigate("/");
+        }
+        setShow(prev=>!prev);
     }
 
     const logoutUser=()=>{
@@ -45,11 +53,11 @@ function Navbar(){
         <div className="navbar">
             <h2 className="title"><a href="/">Nasa apod.</a></h2>
             <div className="options">
-                <p onClick={toFav}>Favourites</p>
                 {username===""?<></>:(
                     <>
                         <img src={show?"close.png":"menu.png"} onClick={toggleShow} alt={show?"close":"menu"}/>
                         <div className={`user-options ${show?"show":""}`}>
+                            <p onClick={toggleTab}>{tab==="/" ? "Favorites" : "Home"}</p>
                             <p onClick={logoutUser}>Logout</p>
                             <p onClick={doDelete}>Delete</p>
                         </div>

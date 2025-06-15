@@ -8,6 +8,7 @@ import { toast } from "react-toastify";
 export function Favourites(){
     const { fetchFav, removeItem }=usePhoto();
     const [data, setData]=useState(null);
+    const [hover, setHover]=useState("");
     const navigate=useNavigate();
 
     const username=localStorage.getItem("username");
@@ -71,12 +72,14 @@ export function Favourites(){
     return(
         <div className="fav-page">
             <h1>Favourites</h1>
-            {data.data.map((item)=>(
-                <div key={item.date} className="fav-items">
-                    <h2 onClick={(e)=>{e.preventDefault();showPhoto(item.date)}}>{item.title}</h2>
-                    <img src="remove.png" alt="remove" onClick={()=>remove(item.date, item.title)}/>
-                </div>
-            ))}
+            <div className="fav-items">
+                {data.data.map((item)=>(
+                    <div key={item.date} className="fav-item" onMouseEnter={()=>setHover(item.date)} onMouseLeave={()=>setHover("")}>
+                        <p onClick={(e)=>{e.preventDefault();showPhoto(item.date)}}>{item.title}</p>
+                        <img src={hover===item.date ? "remove.png" : "remove-dark.png"} alt="remove" onClick={()=>remove(item.date, item.title)}/>
+                    </div>
+                ))}
+            </div>
         </div>
     )
 }
